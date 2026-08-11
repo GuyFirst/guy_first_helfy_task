@@ -1,0 +1,27 @@
+.task-item {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 12px;
+  background-color: white;
+}
+
+.task-item.completed {
+  background-color: #f0f0f0;
+  text-decoration: line-through;
+}
+
+.task-actions button {
+  margin-right: 10px;
+}
+
+.priority-low {
+  background-color: #e8f5e9;
+}
+
+.priority-medium {
+  background-color: #fff8e1;
+}
+
+.priority-high {
+  background-color: #ffebee;
+}

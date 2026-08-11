@@ -1,0 +1,41 @@
+.carousel-container {
+  overflow: hidden;
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.carousel-track {
+  display: flex;
+  /* the track must be as wide as all the cards together.
+   without this it is only as wide as the container, and the
+   -50% below would move the wrong distance */
+  width: max-content;
+  animation: scrollTrack 12s linear infinite;
+}
+
+.carousel-item {
+  width: 200px;
+  padding: 15px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+@keyframes scrollTrack {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* pause on hover, otherwise the buttons move away while the user clicks */
+.carousel-container:hover .carousel-track {
+  animation-play-state: paused;
+}
+
+.carousel-track.static {
+  animation: none;
+  justify-content: center;
+}
